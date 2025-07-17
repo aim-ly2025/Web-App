@@ -1,0 +1,13 @@
+.nav-link, .dropdown-item{
+    color:black;
+}
+
+.universal-container{
+    margin:auto;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    padding-left: 70px;
+    padding-right: 70px;
+    display: flex;
+    align-items: center;
+}
