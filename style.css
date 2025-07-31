@@ -11,3 +11,9 @@
     display: flex;
     align-items: center;
 }
+
+.heading-style{
+    align-items: center;
+    
+    /* display: flex; */
+}
