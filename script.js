@@ -1,6 +1,5 @@
 
-// https://api.airtable.com/v0/appBJ4NQvJJy1HhKj/Email%20Newsletter 
-
+//https://api.airtable.com/v0/appBJ4NQvJJy1HhKj/Opportunities%20List
 "use strict";
 
 // function for our list view
@@ -10,12 +9,12 @@ async function getAllRecords() {
   const options = {
     method: "GET",
     headers: {
-      Authorization: 'Bearer patCTG4EnvjPQHd2E.c65bcb3ad33f45749bd6283fe0976c2c6fff3d249241298e2940b6778ed70dfc',
-    },
+      Authorization: 'Bearer patCTG4EnvjPQHd2E.c65bcb3ad33f45749bd6283fe0976c2c6fff3d249241298e2940b6778ed70dfc', //patCTG4EnvjPQHd2E
+    }, //patCTG4EnvjPQHd2E.c65bcb3ad33f45749bd6283fe0976c2c6fff3d249241298e2940b6778ed70dfc
   };
 
   await fetch(
-    `https://api.airtable.com/v0/appBJ4NQvJJy1HhKj/Email%20Newsletter `,
+    `https://api.airtable.com/v0/appBJ4NQvJJy1HhKj/Opportunities%20List`,
     options
   )
     .then((response) => response.json())
@@ -35,22 +34,26 @@ async function getAllRecords() {
         let group = data.records[i].fields["Student Group"];
 
         newHtml += `
-        <div class ="universal-container opportunites-container">
+      
+
+     
+
+   
+        <div class ="universal-container opportunitity-container">
             <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
             <div class="card h-100">
             <img src="kidsplayground.png" class="card-img-top" alt="${name}">
             <div class="card-body">
-                <h5 class="card-title">${data.records[i].name}">$</h5>
-                <p class="card-text">${data.records[i].description}</p>
+                <h5 class="card-title">${name}</h5>
+                <p class="card-text">${description}</p>
             </div>
             <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
+                <small class="text-muted">${data.records[i].website}</small>
             </div>
             </div>
         </div>
         </div>
-    
         
         `;
       }
@@ -60,3 +63,20 @@ async function getAllRecords() {
 
 }
     getAllRecords(); // no id given, fetch summaries
+
+
+
+      {/* //        <div class="opportunity-container">
+      // <div class="container">
+      //   <div class="row mb-4"> <!-- 1.5rem of margin bottom -->
+      //       <div class="col-md-4 col-sm-6 col-12"> <!-- Sizes: medium sized screens, small sized screens, extra-small screens-->
+      //           <div class="card"> <!-- Us a Bootstrap Utility Class-->
+      //               <img class="card-img-top" src="" alt="${name}">
+      //               <div class="card-body">
+      //                   <h5 class="card-title">${name}</h5>
+      //                   <p class="card-text">${description}</p>
+      //                   <a href="#" class=" custom-button btn btn-primary">Go somewhere</a>
+      //               </div>
+      //           </div>
+      //       </div> */}
+   

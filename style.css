@@ -3,12 +3,13 @@
 }
 
 .universal-container{
-    margin:auto;
-    margin-bottom: 100px;
-    margin-top: 50px;
-    padding-left: 70px;
-    padding-right: 70px;
-    display: flex;
+    margin :auto;
+     /* margin-bottom: 100px;
+    margin-top: 50px;  */
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px; 
+    display: grid;
     align-items: center;
 }
 
@@ -17,3 +18,37 @@
     
     /* display: flex; */
 }
+body{
+    background-color: rgb(197, 232, 232);
+}
+
+h1{
+    text-align: center;
+}
+
+.card-body,.card mb-3{
+    border-color: rgb(255, 255, 255);
+}
+
+.card-margin{
+    /* margin-top: auto;
+    padding: auto; */
+}
+
+.opportunitity-container{
+
+/* padding-top: 5px;
+padding-bottom: 100px; */
+/* display: grid; */
+/* align-items: center; */
+/* align-content: center; */
+/* align-self: center; */
+
+/* grid-template-columns: auto auto auto;  */
+/* 
+grid-auto-rows: auto;
+
+grid-gap: 1rem;  */
+}
+
+
