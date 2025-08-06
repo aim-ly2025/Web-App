@@ -10,80 +10,74 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <h1> Community Connections</h1>
-    <h2> Go to place for opportunites</h2>
+
 
 <!-- patCTG4EnvjPQHd2E.c65bcb3ad33f45749bd6283fe0976c2c6fff3d249241298e2940b6778ed70dfc-->
  <!-- patCTG4EnvjPQHd2E-->
 <!-- Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Community Connections</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Link</a>
         </li>
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
         </li>
         <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     </div>
-    </nav>
+  </div>
+</nav>
 
 <!--Welcome Image -->
-    <div class="universal-container image-container">
+<div class="universal-container image-container">
     <div class="card bg-dark text-white">
     <img src="Best-Summer-Camps.jpg" class="card-img" alt="summercamp">
     <div class="card-img-overlay">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text">Last updated 3 mins ago</p>
-    </div>
-    </div>
-    </div>
-<!--Welcome Page-->
-    <div class ="universal-container welcome-container">
-        <div class="card mb-3" style="max-width: 540px;">
-    <div class="row g-0">
-        <div class="col-md-4">
-        <img src="kidsgroup.png" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-8">
-        <div class="card-body">
-            <h5 class="card-title">Welcome to Community Connections</h5>
-            <p class="card-text">We support our local bay area community with up to date activites all year around</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
-        </div>
+        <h5 class="card-title"></h5>
+        <p class="card-text"></p>
+        <p class="card-text"></p>
     </div>
     </div>
     </div>
 
+<!--Welcome Page-->
+<div class="universal-container welcome-container">
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">Welcome to Community Connections</h5>
+            <p class="card-text">We support our local bay area community with up to date activites all year around</p>
+            <p class="card-text"><small class="text-muted"></small></p>
+        </div>
+    </div>
+</div>
+
 <!--Categories-->
     
-    <h1 class ="heading-style"> Categories</h1>
+    <h1 class ="header"> Categories</h1>
     <div class ="universal-container category-container">
     <div class="row">
     <div class="col-sm-6">
@@ -213,10 +207,11 @@
 </div> -->
 
       <!--container with id 'brews' where JavaScript pushes the Airtable data -->
-    <div class="container-fluid tables">
-      <div class="row g-3" id="opportunity"></div>
-    </div>
-
+    <h1 class="header">Opportunites</h1>
+<div class="universal-container opportunites-container">
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="opportunity">
+        </div>
+</div>
     
 
 <script src="./script.js"> </script>

@@ -1,16 +1,13 @@
-
-//https://api.airtable.com/v0/appBJ4NQvJJy1HhKj/Opportunities%20List
 "use strict";
 
-// function for our list view
 async function getAllRecords() {
   let getResultElement = document.getElementById("opportunity");
 
   const options = {
     method: "GET",
     headers: {
-      Authorization: 'Bearer patCTG4EnvjPQHd2E.c65bcb3ad33f45749bd6283fe0976c2c6fff3d249241298e2940b6778ed70dfc', //patCTG4EnvjPQHd2E
-    }, //patCTG4EnvjPQHd2E.c65bcb3ad33f45749bd6283fe0976c2c6fff3d249241298e2940b6778ed70dfc
+      Authorization: 'Bearer patCTG4EnvjPQHd2E.c65bcb3ad33f45749bd6283fe0976c2c6fff3d249241298e2940b6778ed70dfc',
+    },
   };
 
   await fetch(
@@ -19,52 +16,39 @@ async function getAllRecords() {
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log(data); // response is an object w/ .records array
+      console.log(data);
 
-      getResultElement.innerHTML = ""; // clear brews
+      getResultElement.innerHTML = "";
 
       let newHtml = "";
 
       for (let i = 0; i < data.records.length; i++) {
-        let name = data.records[i].fields["Name"]; // here we are getting column values
-        let type = data.records[i].fields["Type of Opportunity"]; // here we are getting column values
-        let subject = data.records[i].fields["Subject"]; //here we are using the Field ID to fecth the name property
-        let website = data.records[i].fields["Website"];
+        let name = data.records[i].fields["Name"];
         let description = data.records[i].fields["Description"];
-        let group = data.records[i].fields["Student Group"];
+        let website = data.records[i].fields["Website"];
 
         newHtml += `
-      
-
-     
-
-   
-        <div class ="universal-container opportunitity-container">
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
+        
+          <div class="col-md-4">
             <div class="card h-100">
-            <img src="kidsplayground.png" class="card-img-top" alt="${name}">
-            <div class="card-body">
+              <img src="kidsplayground.png" class="card-img-top" alt="${name}">
+              <div class="card-body">
                 <h5 class="card-title">${name}</h5>
                 <p class="card-text">${description}</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">${website}</small>
+              </div>
             </div>
-            <div class="card-footer">
-                <small class="text-muted">${data.records[i].website}</small>
-            </div>
-            </div>
-        </div>
-        </div>
-        
+          </div>
         `;
       }
 
       getResultElement.innerHTML = newHtml;
-    }); 
-
+    });
 }
-    getAllRecords(); // no id given, fetch summaries
 
-
+getAllRecords();
 
       {/* //        <div class="opportunity-container">
       // <div class="container">

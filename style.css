@@ -1,54 +1,110 @@
-.nav-link, .dropdown-item{
+/* .nav-link, .dropdown-item{
     color:black;
+} */
+
+.navbar-light .navbar-nav .nav-link {
+  color: black;
 }
 
-.universal-container{
-    margin :auto;
-     /* margin-bottom: 100px;
-    margin-top: 50px;  */
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 30px; 
-    display: grid;
-    align-items: center;
-}
-
-.heading-style{
-    align-items: center;
-    
-    /* display: flex; */
-}
 body{
     background-color: rgb(197, 232, 232);
 }
 
-h1{
+.header{
     text-align: center;
+    font-size: 2.5rem; /* Makes the font size larger */
+    margin-top: 2rem; /* Adds space above the heading */
+    margin-bottom: 2rem; /* Adds space below the heading */
+    line-height: 1.2; /* Improves readability by adjusting line height */
+    font-weight: 700; /* Makes the text bolder for emphasis */
+}
+
+/* Optional: To make headings even more readable on smaller screens, you can add a media query */
+@media (max-width: 768px) {
+    .header {
+        font-size: 2.5rem;
+    }
+}
+
+/* Update the existing universal-container class to handle the layout for both sections */
+.universal-container {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    margin: 0 auto;
+    max-width: 100%; /* Ensures full width */
 }
 
 .card-body,.card mb-3{
     border-color: rgb(255, 255, 255);
 }
 
-.card-margin{
-    /* margin-top: auto;
-    padding: auto; */
-}
 
-.opportunitity-container{
 
-/* padding-top: 5px;
-padding-bottom: 100px; */
-/* display: grid; */
-/* align-items: center; */
-/* align-content: center; */
-/* align-self: center; */
-
-/* grid-template-columns: auto auto auto;  */
-/* 
-grid-auto-rows: auto;
-
-grid-gap: 1rem;  */
+.opportunites-container {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    max-width: 90%; /* Adjust this value to control how much of the screen the cards take up */
+    margin: 0 auto; /* Centers the container itself */
 }
 
 
+
+/* Ensure the opportunity cards themselves fill the space within their container */
+.opportunites-container .card {
+    width: 100%;
+}
+
+
+.category-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to a new line */
+    justify-content: center; /* Centers the cards horizontally */
+    gap: 20px;
+    padding: 20px;
+}
+
+.category-container .card {
+    margin: 0; /* Ensures the cards themselves don't have extra margin */
+}
+
+/* Updated card styling for better responsiveness */
+.category-container .col-sm-6 {
+    flex: 1 1 calc(50% - 20px); /* Adjusts card width for 2-column layout */
+    max-width: calc(50% - 20px);
+    margin-bottom: 20px; /* Adds space below each card */
+}
+
+@media (max-width: 768px) {
+    .category-container .col-sm-6 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Center the welcome card and set its width */
+
+/* Ensure the text is readable by increasing font size and adding more padding */
+.welcome-container .card-body {
+    padding: 2.5rem; /* Increase padding inside the card body */
+}
+
+.welcome-container .card-title {
+    font-size: 2.5rem; /* Increase font size for the title */
+    text-align: center;
+}
+
+.welcome-container .card-text {
+    font-size: 1.5rem; /* Increase font size for the body text */
+}
+
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.welcome-container .card {
+    width: 90%; /* This makes the card significantly wider */
+    margin: 0 auto; /* This centers the card on the page */
+}
