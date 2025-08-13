@@ -108,3 +108,12 @@ body{
     width: 90%; /* This makes the card significantly wider */
     margin: 0 auto; /* This centers the card on the page */
 }
+
+.blue{ 
+    color: blue;
+
+}
+
+/* h4{
+    font-size: larger;
+}  */

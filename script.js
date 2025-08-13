@@ -39,12 +39,13 @@ async function getAllRecords() {
                 }
                   </a>
               <div class="card-body">
-                <h5 class="card-title">${name}</h5>
+                <h4 class="card-title">${name}</h4>
+                <br>
                 <p class="card-text">${description}</p>
                 <a class="" href="opportunity.html?id=${data.records[i].id}">Website Link</a>
               </div>
               <div class="card-footer">
-                <small class="text-muted">${website}</small>               
+                   <a href="${website}" class="card-link blue"  >For more information</a>
               </div>
             </div>
           </div>
@@ -87,8 +88,23 @@ async function getOneRecord(id) {
 
       let newHtml = `
 
-        <p>dfsdf</p>
-
+      
+      <div class="card" style="width: 30rem;">
+      <img class="card-img-top rounded" alt="${name}" src="${image[0].url}">        
+      <div class="card-body">
+          <h4 class="card-title">${name}</h4>
+          <br>
+          <p class="card-text">${description}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Subject: ${subject}</li>
+          <li class="list-group-item">Student Group: ${group}</li>
+          <li class="list-group-item">Type of opportunity: ${type}</li>
+        </ul>
+        <div class="card-body">
+          <a href="${website}" class="card-link blue"  >For more information</a>
+        </div>
+    </div>
 
       `;
 
